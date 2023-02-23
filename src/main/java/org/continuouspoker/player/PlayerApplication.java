@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PlayerApplication {
 
 	public static void main(String[] args) {
+		System.out.println("Lets go");
 		SpringApplication.run(PlayerApplication.class, args);
 	}
 }
