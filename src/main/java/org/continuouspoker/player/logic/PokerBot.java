@@ -20,18 +20,21 @@ public class PokerBot {
     PokerDeck deck;
 
     public Bet decide(final Table table) {
-        System.out.println(table);
+
         this.table = new PokerTable(table);
         this.player = this.table.getPlayer();
         this.deck = new PokerDeck(this.table, this.player);
 
         if (deck.isRoyalFlush()) {
+            System.out.println(table);
             System.out.println("Royal Flush!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             return createAllIn();
         } else if (deck.isStraightFlush()) {
+            System.out.println(table);
             System.out.println("Straight Flush !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             return createAllIn();
         } else if (deck.isStreet()) {
+            System.out.println(table);
             System.out.println("Street!!!");
             return createRaiseBet();
         } else if (deck.getMultiples().size() > 0) {
