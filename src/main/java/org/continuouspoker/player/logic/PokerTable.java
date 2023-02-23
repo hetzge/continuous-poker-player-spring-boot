@@ -22,4 +22,8 @@ class PokerTable {
         return table.getCommunityCards().stream().map(PokerCard::new).collect(Collectors.toList());
     }
 
+    public boolean canCheck() {
+        return table.getPot() == 0;
+    }
+
 }

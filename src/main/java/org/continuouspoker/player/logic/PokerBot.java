@@ -15,6 +15,14 @@ public class PokerBot {
       return createRaiseBet();
    }
 
+   public boolean canCheck() {
+      return table.canCheck();
+   }
+
+   public Bet createCheckBet() {
+      return new Bet().bet(0);
+   }
+
    public Bet createRaiseBet() {
       return new Bet().bet(player.getRaiseBet(this.table));
    }

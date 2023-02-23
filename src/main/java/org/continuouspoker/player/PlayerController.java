@@ -13,6 +13,7 @@ public class PlayerController implements DefaultApiDelegate {
 
    @Override
    public ResponseEntity<Bet> getBet(final Table table) {
+      System.out.println("Hallo");
       final PokerBot player = new PokerBot();
       return ResponseEntity.ok(player.decide(table));
    }
